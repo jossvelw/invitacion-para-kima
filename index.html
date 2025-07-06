@@ -2,30 +2,40 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>Invitación Especial 💖</title>
   <style>
+    /* Reset y base */
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
-      padding: 0;
+      padding: 15px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
       color: #333;
       text-align: center;
-      animation: fadeIn 2s ease-in;
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      padding: 20px;
-      box-sizing: border-box;
+      justify-content: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      padding: 25px 20px;
+      max-width: 360px;
+      width: 100%;
+      box-shadow: 0 8px 20px rgba(255, 77, 109, 0.3);
+      animation: fadeIn 1.8s ease forwards;
     }
 
     @keyframes fadeIn {
       from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(18px);
       }
       to {
         opacity: 1;
@@ -33,83 +43,83 @@
       }
     }
 
-    .container {
-      max-width: 400px;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.85);
-      border-radius: 15px;
-      padding: 25px 20px;
-      box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
-    }
-
     h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
+      font-size: 2.1rem;
+      margin-bottom: 12px;
       color: #d63384;
-      animation: popIn 1s ease-in-out;
-    }
-
-    @keyframes popIn {
-      0% {
-        transform: scale(0.5);
-        opacity: 0;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
     }
 
     .heart {
-      font-size: 3.5em;
+      font-size: 3.5rem;
       color: #ff4d6d;
-      animation: pulse 1s infinite alternate;
-      margin-bottom: 10px;
+      animation: pulse 1.2s infinite alternate ease-in-out;
+      margin-bottom: 12px;
     }
-
     @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      100% {
-        transform: scale(1.1);
-      }
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
     }
 
     p {
-      font-size: 1.1em;
-      margin: 10px 0;
+      font-size: 1.1rem;
+      margin: 8px 0;
       line-height: 1.4;
     }
 
+    strong {
+      font-weight: 700;
+    }
+
     .button {
-      margin: 20px 10px 0 10px;
-      padding: 14px 30px;
-      font-size: 1.1em;
+      margin: 22px 0 12px;
+      padding: 14px 0;
+      font-size: 1.15rem;
       background-color: #ff4d6d;
       color: white;
       border: none;
       border-radius: 30px;
       cursor: pointer;
-      transition: background 0.3s ease;
       width: 100%;
-      max-width: 300px;
-      box-sizing: border-box;
+      transition: background-color 0.3s ease;
+      user-select: none;
     }
-
     .button:hover {
       background-color: #e63956;
     }
 
     .button-no {
       background-color: #aaa;
-      margin-top: 10px;
+      margin-bottom: 0;
     }
-
     .button-no:hover {
       visibility: hidden;
     }
 
     .footer {
-      margin-top: 30px;
-      font-size: 0.9em;
+      margin-top: 28px;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main" aria-label="Invitación especial para Anilu">
+    <div class="heart" aria-hidden="true">💖</div>
+    <h1>Hola Anilu 💌</h1>
+    <p>Tengo una cita muy especial planeada solo para ti.</p>
+    <p>🗓️ <strong>25 de julio</strong></p>
+    <p>📍 <strong>El lugar es sorpresa</strong></p>
+    <p>👗 <strong>Dress code:</strong> Cualquiera menos trapeadores (playera de las Chivas) 😄</p>
+    <p>¿Aceptas venir conmigo?</p>
+
+    <button class="button" onclick="alert('Te quiero loquita, nos vemos pronto.')">Sí, acepto</button>
+    <button class="button button-no" aria-label="No, no acepto">No</button>
+
+    <div class="footer">
+      Con cariño,<br />
+      Josue ✨
+    </div>
+  </div>
+</body>
+</html>
