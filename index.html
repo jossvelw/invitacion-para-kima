@@ -1,66 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Invitación Especial 💖</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
       color: #333;
       text-align: center;
       animation: fadeIn 2s ease-in;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .container {
-      padding: 50px 20px;
+      max-width: 400px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 15px;
+      padding: 25px 20px;
+      box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
     }
 
     h1 {
-      font-size: 2.5em;
+      font-size: 2em;
       margin-bottom: 10px;
       color: #d63384;
       animation: popIn 1s ease-in-out;
     }
 
     @keyframes popIn {
-      0% { transform: scale(0.5); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 
     .heart {
-      font-size: 4em;
+      font-size: 3.5em;
       color: #ff4d6d;
       animation: pulse 1s infinite alternate;
+      margin-bottom: 10px;
     }
 
     @keyframes pulse {
-      0% { transform: scale(1); }
-      100% { transform: scale(1.1); }
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.1);
+      }
     }
 
     p {
-      font-size: 1.2em;
+      font-size: 1.1em;
       margin: 10px 0;
+      line-height: 1.4;
     }
 
     .button {
       margin: 20px 10px 0 10px;
-      padding: 12px 30px;
-      font-size: 1em;
+      padding: 14px 30px;
+      font-size: 1.1em;
       background-color: #ff4d6d;
       color: white;
       border: none;
-      border-radius: 25px;
+      border-radius: 30px;
       cursor: pointer;
       transition: background 0.3s ease;
+      width: 100%;
+      max-width: 300px;
+      box-sizing: border-box;
     }
 
     .button:hover {
@@ -69,6 +103,7 @@
 
     .button-no {
       background-color: #aaa;
+      margin-top: 10px;
     }
 
     .button-no:hover {
@@ -76,29 +111,5 @@
     }
 
     .footer {
-      margin-top: 40px;
+      margin-top: 30px;
       font-size: 0.9em;
-      color: #555;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="heart">💖</div>
-    <h1>Hola Anilu 💌</h1>
-    <p>Tengo una cita muy especial planeada solo para ti.</p>
-    <p>🗓️ <strong>25 de julio</strong></p>
-    <p>📍 <strong>El lugar es sorpresa</strong></p>
-    <p>👗 <strong>Dress code:</strong> Cualquiera menos trapeadores (playera de las Chivas) 😄</p>
-    <p>¿Aceptas venir conmigo?</p>
-
-    <button class="button" onclick="alert('Te quiero loquita, nos vemos pronto.')">Sí, acepto</button>
-    <button class="button button-no">No</button>
-
-    <div class="footer">
-      Con cariño,<br>
-      Josue ✨
-    </div>
-  </div>
-</body>
-</html>
